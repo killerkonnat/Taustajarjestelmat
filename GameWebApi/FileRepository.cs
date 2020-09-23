@@ -104,5 +104,14 @@ namespace GameWebApi
             File.WriteAllText(path, JsonConvert.SerializeObject(text));
         }
 
+        //Dummy functions to get rid of build errors from IRepository changes
+        public Task<Item> CreateItem(Guid playerId, Item item) { return null; }
+        public  Task<Item> GetItem(Guid playerId, Guid itemId) { return null; }
+        public Task<Item[]> GetAllItems(Guid playerId) { return null; }
+        public  Task<Item> UpdateItem(Guid playerId, Item item) { return null; }
+        public  Task<Item> DeleteItem(Guid playerId, Item item) { return null; }
+
     }
+
+ 
 }
