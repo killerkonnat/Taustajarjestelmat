@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Driver;
+using MongoDB.Driver.Core.Operations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,6 +21,15 @@ namespace GameWebApi
         Task<Item[]> GetAllItems(Guid playerId);
         Task<Item> UpdateItem(Guid playerId, Item item);
         Task<Item> DeleteItem(Guid playerId, Item item);
+        Task<Player[]> GetPlayersWithXscore(int minScore);
+        Task<UpdateResult> PushItem(Guid id, Item item);
+        Task<UpdateResult> IncrementScore(Guid id, int score_add);
+        Task<UpdateResult> ChangePlayerName(Guid id, string name);
+        Task<Player[]> GetPlayersWithNumItems(int itemAmount);
+        Task<Player[]> GetPlayersWithTag(string tag);
+        Task<Player> GetPlayerWithName(string name);
+
+        Task <Player[]>GetBestPlayers();
     }
 
 }

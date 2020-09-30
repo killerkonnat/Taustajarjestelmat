@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
-
+using MongoDB.Driver;
 
 namespace GameWebApi
 {
@@ -110,6 +110,16 @@ namespace GameWebApi
         public Task<Item[]> GetAllItems(Guid playerId) { return null; }
         public  Task<Item> UpdateItem(Guid playerId, Item item) { return null; }
         public  Task<Item> DeleteItem(Guid playerId, Item item) { return null; }
+
+        public Task<Player[]> GetPlayersWithXscore(int minScore) { return null;}
+        public Task<UpdateResult> PushItem(Guid id, Item item) { return null; }
+        public Task<UpdateResult> IncrementScore(Guid id, int score_add) { return null; }
+        public Task<UpdateResult> ChangePlayerName(Guid id, string name) { return null; }
+        public Task<Player[]> GetPlayersWithNumItems(int itemAmount) { return null; }
+        public Task<Player[]> GetPlayersWithTag(string tag) { return null; }
+        public Task<Player> GetPlayerWithName(string name) { return null; }
+
+        public Task<Player[]> GetBestPlayers() { return null; }
 
     }
 

@@ -14,8 +14,10 @@ namespace GameWebApi
         public bool IsBanned { get; set; }
         public DateTime CreationTime { get; set; }
 
-        //task4
+
         public List<Item> itemList = new List<Item>();
+
+        public string[] Tags = { };
 
     }
 }
