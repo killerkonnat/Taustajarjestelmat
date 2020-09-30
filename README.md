@@ -4,9 +4,9 @@
 
 Toteutetut queryt:
 
-+ Players with at least X score
++ Get players with at least X score
 
-+ Player with name
++ Get player with name
 
 + Players with at least a certain number of items
 
